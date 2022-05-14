@@ -14,7 +14,7 @@ build:
     - pyload = pyload.__main__:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -36,6 +36,11 @@ requirements:
     - python >=3.6
     - semver >=2.10
     - setuptools >=38.3
+    - slixmpp
+    - arm_pyart
+    - beautifulsoup4
+    - werkzeug
+    - jinja2
 
 test:
   imports:
