@@ -11,6 +11,8 @@ Summary: The free and open-source Download Manager written in pure Python
 
 Development: https://github.com/pyload/pyload
 
+Documentation: https://github.com/pyload/pyload/wiki
+
 Current build status
 ====================
 
