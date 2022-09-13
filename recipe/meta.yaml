@@ -41,7 +41,7 @@ requirements:
     - beautifulsoup4
     - werkzeug
     - jinja2
-    - Flask-Caching~ =1.9
+    - Flask-Caching ~=1.9
 
 test:
   imports:
