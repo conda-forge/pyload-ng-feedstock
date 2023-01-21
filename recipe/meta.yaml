@@ -42,6 +42,7 @@ requirements:
     - werkzeug
     - jinja2
     - Flask-Caching ~=1.9
+    - cython #could removed afterward not a direct dep
 
 test:
   imports:
