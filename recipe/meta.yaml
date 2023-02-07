@@ -50,6 +50,7 @@ test:
   commands:
     - pip check
     - pyload --help
+    - pyload --version
   requires:
     - pip
 
