@@ -1,11 +1,11 @@
-About pyload-ng
-===============
+About pyload-ng-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyload-ng-feedstock/blob/main/LICENSE.txt)
 
 Home: https://pyload.net
 
 Package license: AGPL-3.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyload-ng-feedstock/blob/main/LICENSE.txt)
 
 Summary: The free and open-source Download Manager written in pure Python
 
