@@ -1,5 +1,5 @@
 {% set name = "pyload-ng" %}
-{% set version = "0.5.0b3.dev54" %}
+{% set version = "0.5.0b3.dev57" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyload-ng-{{ version }}.tar.gz
-  sha256: ca08e932a4ff7395f71ddb2c605a5156599e018789cd2e5815a43feb5855d156
+  sha256: d79c70e66fa24717ce83e666a8e73f10b49cd24a1bbb90ba81279a048ff60ad4
 
 build:
   entry_points:
@@ -21,6 +21,7 @@ requirements:
     - pip
     - python >=3.6
   run:
+    - semver ~=2.10
     - bitmath >=1.3
     - Cheroot ~=8.4
     - cryptography >=36.0
