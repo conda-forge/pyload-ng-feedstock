@@ -1,5 +1,5 @@
 {% set name = "pyload-ng" %}
-{% set version = "0.5.0b3.dev60" %}
+{% set version = "0.5.0b3.dev62" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyload-ng-{{ version }}.tar.gz
-  sha256: d3c3e685bf69e871809d314cadb39f27aa8f429a026b1a5b45f5a535c5c01503
+  sha256: c71d39807af53f885434dda7abe698b35aa0ea301143c0f3f7f492c91c0426c8
 
 build:
   entry_points:
@@ -21,12 +21,13 @@ requirements:
     - pip
     - python >=3.6
   run:
+    - flask-session2
     - semver ~=2.10
     - bitmath >=1.3
     - Cheroot ~=8.4
     - cryptography >=36.0
     - filetype >=1.0
-    - flask ~=2.0.0
+    - flask ~=2.3
     - flask-babel =1.0
     - flask-caching >=1.9
     - flask-compress =1.8
@@ -43,7 +44,6 @@ requirements:
     - werkzeug
     - jinja2
     - Flask-Caching ~=1.9
-    #- cython #could removed afterward not a direct dep
 
 test:
   imports:
