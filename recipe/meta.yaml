@@ -27,7 +27,7 @@ requirements:
     - Cheroot ~=8.4
     - cryptography >=36.0
     - filetype >=1.0
-    - flask =2.3
+    - flask ~=2.3
     - flask-babel =1.0
     - flask-caching >=1.9
     - flask-compress =1.8
