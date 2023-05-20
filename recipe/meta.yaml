@@ -44,7 +44,7 @@ requirements:
     - werkzeug
     - jinja2
     - Flask-Caching ~=1.9
-    - xyzservices = 2023.2 #temporary
+    - xyzservices =2023.2 #temporary
 
 test:
   imports:
