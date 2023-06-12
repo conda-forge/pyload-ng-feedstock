@@ -13,6 +13,12 @@ Development: https://github.com/pyload/pyload
 
 Documentation: https://github.com/pyload/pyload/wiki
 
+*pyLoad* is a free and open source downloader for 1-click-hosting sites.
+It supports link decryption as well as all important container formats.
+Targeted for headless NASs it is designed to be extremely lightweight,
+fully customizable and remotely manageable via web interface.
+
+
 Current build status
 ====================
 
