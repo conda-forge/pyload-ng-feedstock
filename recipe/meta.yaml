@@ -36,9 +36,9 @@ requirements:
     - flask-session >=0.3
     - flask-themes2 >=1.0
     - js2py >=0.7
-    - pycurl >=7.43
+    - pycurl >=7.43,<8.dev0
     - python >=3.6
-    - semver >=2.10
+    - semver >=2.10,<3.dev0
     - setuptools >=38.3
     - slixmpp
     - arm_pyart
