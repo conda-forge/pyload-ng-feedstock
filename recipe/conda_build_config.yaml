@@ -1,2 +1,4 @@
 channel_targets:
   - conda-forge pyload-ng_dev
+python:
+ - 3.11  #investigating the Flask-Babel 1.0.0 is not supported on this platform

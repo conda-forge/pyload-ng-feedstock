@@ -50,7 +50,7 @@ test:
     - pyload --version
   requires:
     - pip
-    - flask-babel >=1.0,<2.dev0 #investigating the Flask-Babel 1.0.0 is not supported on this platfor
+    - flask-babel >=1.0,<2.dev0 #investigating the Flask-Babel 1.0.0 is not supported on this platform
 
 about:
   home: https://pyload.net
