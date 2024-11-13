@@ -1,19 +1,16 @@
-c_stdlib:
-- vs
+cdt_name:
+- conda
 channel_sources:
 - conda-forge
 channel_targets:
 - conda-forge pyload-ng_dev
+docker_image:
+- quay.io/condaforge/linux-anvil-cos7-x86_64
 pin_run_as_build:
   python:
     min_pin: x.x
     max_pin: x.x
 python:
-- 3.9.* *_73_pypy
-python_impl:
-- pypy
-target_platform:
-- win-64
-zip_keys:
-- - python
-  - python_impl
+- 3.12.* *_cpython
+python_min:
+- '3.9'
