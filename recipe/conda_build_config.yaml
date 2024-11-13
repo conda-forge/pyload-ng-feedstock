@@ -1,6 +1,3 @@
-python_min:
-  - "3.9"
-python_max:
-  - "3.11"
-channel_targets:
-  - conda-forge pyload-ng_dev
+channel_targets: conda-forge pyload-ng_dev
+python_max: '3.11'
+python_min: '3.9'
