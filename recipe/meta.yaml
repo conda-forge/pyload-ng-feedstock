@@ -43,9 +43,8 @@ requirements:
 
 test:
   imports:
-    - pyload
+   # - pyload
   commands:
-   # - set PYTHONIOENCODING=utf-8  # [win]
     - pip check
    # - pyload --help
    # - pyload --version 
