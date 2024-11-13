@@ -43,11 +43,11 @@ requirements:
 
 test:
   imports:
-   # - pyload
+    - pyload
   commands:
-    - pip check
-   # - pyload --help
-   # - pyload --version 
+   # - pip check
+    - pyload --help
+    - pyload --version 
    # investigating the Flask-Babel 1.0.0 is not supported on this platform skipping proper tests for now
   requires:
     - pip
