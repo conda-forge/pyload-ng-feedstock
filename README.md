@@ -1,33 +1,119 @@
-About pyload-ng-feedstock
-=========================
+About dukpy-feedstock
+=====================
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyload-ng-feedstock/blob/main/LICENSE.txt)
 
-Home: https://pyload.net
+Home: https://github.com/amol-/dukpy
 
-Package license: AGPL-3.0-or-later
+Package license: MIT
 
-Summary: The free and open-source Download Manager written in pure Python
-
-Development: https://github.com/pyload/pyload
-
-Documentation: https://github.com/pyload/pyload/wiki
-
-*pyLoad* is a free and open source downloader for 1-click-hosting sites.
-It supports link decryption as well as all important container formats.
-Targeted for headless NASs it is designed to be extremely lightweight,
-fully customizable and remotely manageable via web interface.
-
+Summary: Simple JavaScript interpreter for Python
 
 Current build status
 ====================
 
 
-<table><tr><td>All platforms:</td>
+<table>
+    
+  <tr>
+    <td>Azure</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=16152&branchName=main">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyload-ng-feedstock?branchName=main">
-      </a>
+      <details>
+        <summary>
+          <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=16152&branchName=main">
+            <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyload-ng-feedstock?branchName=main">
+          </a>
+        </summary>
+        <table>
+          <thead><tr><th>Variant</th><th>Status</th></tr></thead>
+          <tbody><tr>
+              <td>linux_64_python3.10.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=16152&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyload-ng-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_python3.10.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_64_python3.11.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=16152&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyload-ng-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_python3.11.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_64_python3.12.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=16152&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyload-ng-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_python3.12.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_64_python3.9.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=16152&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyload-ng-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_python3.9.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_python3.10.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=16152&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyload-ng-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_python3.10.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_python3.11.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=16152&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyload-ng-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_python3.11.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_python3.12.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=16152&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyload-ng-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_python3.12.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_python3.9.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=16152&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyload-ng-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_python3.9.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64_python3.10.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=16152&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyload-ng-feedstock?branchName=main&jobName=win&configuration=win%20win_64_python3.10.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64_python3.11.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=16152&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyload-ng-feedstock?branchName=main&jobName=win&configuration=win%20win_64_python3.11.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64_python3.12.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=16152&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyload-ng-feedstock?branchName=main&jobName=win&configuration=win%20win_64_python3.12.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64_python3.9.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=16152&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyload-ng-feedstock?branchName=main&jobName=win&configuration=win%20win_64_python3.9.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </details>
     </td>
   </tr>
 </table>
@@ -37,53 +123,53 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-pyload--ng-green.svg)](https://anaconda.org/conda-forge/pyload-ng) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pyload-ng.svg)](https://anaconda.org/conda-forge/pyload-ng) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pyload-ng.svg)](https://anaconda.org/conda-forge/pyload-ng) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pyload-ng.svg)](https://anaconda.org/conda-forge/pyload-ng) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-dukpy-green.svg)](https://anaconda.org/conda-forge/dukpy) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/dukpy.svg)](https://anaconda.org/conda-forge/dukpy) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/dukpy.svg)](https://anaconda.org/conda-forge/dukpy) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/dukpy.svg)](https://anaconda.org/conda-forge/dukpy) |
 
-Installing pyload-ng
-====================
+Installing dukpy
+================
 
-Installing `pyload-ng` from the `conda-forge/label/pyload-ng_dev` channel can be achieved by adding `conda-forge/label/pyload-ng_dev` to your channels with:
+Installing `dukpy` from the `conda-forge/label/pyload-ng_dev` channel can be achieved by adding `conda-forge/label/pyload-ng_dev` to your channels with:
 
 ```
 conda config --add channels conda-forge/label/pyload-ng_dev
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge/label/pyload-ng_dev` channel has been enabled, `pyload-ng` can be installed with `conda`:
+Once the `conda-forge/label/pyload-ng_dev` channel has been enabled, `dukpy` can be installed with `conda`:
 
 ```
-conda install pyload-ng
-```
-
-or with `mamba`:
-
-```
-mamba install pyload-ng
-```
-
-It is possible to list all of the versions of `pyload-ng` available on your platform with `conda`:
-
-```
-conda search pyload-ng --channel conda-forge/label/pyload-ng_dev
+conda install dukpy
 ```
 
 or with `mamba`:
 
 ```
-mamba search pyload-ng --channel conda-forge/label/pyload-ng_dev
+mamba install dukpy
+```
+
+It is possible to list all of the versions of `dukpy` available on your platform with `conda`:
+
+```
+conda search dukpy --channel conda-forge/label/pyload-ng_dev
+```
+
+or with `mamba`:
+
+```
+mamba search dukpy --channel conda-forge/label/pyload-ng_dev
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search pyload-ng --channel conda-forge/label/pyload-ng_dev
+mamba repoquery search dukpy --channel conda-forge/label/pyload-ng_dev
 
-# List packages depending on `pyload-ng`:
-mamba repoquery whoneeds pyload-ng --channel conda-forge/label/pyload-ng_dev
+# List packages depending on `dukpy`:
+mamba repoquery whoneeds dukpy --channel conda-forge/label/pyload-ng_dev
 
-# List dependencies of `pyload-ng`:
-mamba repoquery depends pyload-ng --channel conda-forge/label/pyload-ng_dev
+# List dependencies of `dukpy`:
+mamba repoquery depends dukpy --channel conda-forge/label/pyload-ng_dev
 ```
 
 
@@ -128,17 +214,17 @@ Terminology
                   produce the finished article (built conda distributions)
 
 
-Updating pyload-ng-feedstock
-============================
+Updating dukpy-feedstock
+========================
 
-If you would like to improve the pyload-ng recipe or build a new
+If you would like to improve the dukpy recipe or build a new
 package version, please fork this repository and submit a PR. Upon submission,
 your changes will be run on the appropriate platforms to give the reviewer an
 opportunity to confirm that the changes result in a successful build. Once
 merged, the recipe will be re-built and uploaded automatically to the
 `conda-forge` channel, whereupon the built conda packages will be available for
 everybody to install and use from the `conda-forge` channel.
-Note that all branches in the conda-forge/pyload-ng-feedstock are
+Note that all branches in the conda-forge/dukpy-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
 on branches in forks and branches in the main repository should only be used to
 build distinct package versions.
