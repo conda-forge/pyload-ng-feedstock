@@ -6,14 +6,14 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
   sha256: 2db8b16947ec59e53c595a59b122c998547f8552e10abd4346c21e15809cc450
 
 build:
   entry_points:
     - pyload = pyload.__main__:main
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
   noarch: python
 
 requirements:
@@ -24,7 +24,7 @@ requirements:
     - setuptools >=38.3
     - wheel
   run:
-    - python <3.12
+    - python >={{ python_min }},<3.12
     - cheroot
     - flask
     - flask-babel >=1.0,<2.dev0
@@ -51,7 +51,7 @@ test:
    # investigating the Flask-Babel 1.0.0 is not supported on this platform skipping proper tests for now
   requires:
     - pip
-    - python {{ python_min }} #investigating the Flask-Babel 1.0.0 is not supported on this platform
+    - python {{ python_min }}
 
 about:
   home: https://pyload.net
