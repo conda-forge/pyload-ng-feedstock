@@ -24,7 +24,7 @@ requirements:
     - setuptools >=38.3
     - wheel
   run:
-    - python <3.12
+    - python >={{ python_min }},<3.12
     - cheroot
     - flask
     - flask-babel >=1.0,<2.dev0
@@ -51,7 +51,7 @@ test:
    # investigating the Flask-Babel 1.0.0 is not supported on this platform skipping proper tests for now
   requires:
     - pip
-    - python {{ python_min }} #investigating the Flask-Babel 1.0.0 is not supported on this platform
+    - python {{ python_min }}
 
 about:
   home: https://pyload.net
