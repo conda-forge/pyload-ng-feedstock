@@ -30,7 +30,7 @@ requirements:
     - flask-babel >=1.0,<2.dev0
     - flask-caching >=1.9,<2.dev0
     - flask-compress >=1.8,<2.dev0
-    - flask-session >=0.4.1,<0.5.dev0  #Should be for 37 or less according to grayskull, but not according to the tests
+   # - flask-session >=0.4.1,<0.5.dev0  #Should be for 37 or less according to grayskull, but not according to the tests
     - flask-themes2 >=1.0,<2.dev0
     - bitmath >=1.3,<2.dev0
     - cryptography >=35.0.0
@@ -40,15 +40,15 @@ requirements:
     - certifi
     - semver >=2.10,<3.dev0
     - setuptools >=38.3
+    - pip <24 #Flask-Babel 1.0.0 issues
 
 test:
   imports:
     - pyload
   commands:
-   # - pip check
+    - pip check
     - pyload --help
     - pyload --version 
-   # investigating the Flask-Babel 1.0.0 is not supported on this platform skipping proper tests for now
   requires:
     - pip
     - python {{ python_min }}
