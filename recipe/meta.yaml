@@ -12,14 +12,15 @@ source:
 build:
   entry_points:
     - pyload = pyload.__main__:main
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 3
+  skip: true  # [ py >= 312]
   #noarch: python
 
 requirements:
   host:
     - pip
-    - python <3.12 #see PR and issues 58 & 57
+    #- python <3.12 #see PR and issues 58 & 57
     #- python {{ python_min }}
     - setuptools >=38.3
     - wheel
