@@ -20,6 +20,7 @@ build:
 requirements:
   host:
     - pip
+    - python
     #- python <3.12 #see PR and issues 58 & 57
     #- python {{ python_min }}
     - setuptools >=38.3
