@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyload-ng-feeds
 
 Home: https://pyload.net
 
-Package license: AGPL-3.0-or-later
+Package license: AGPL-3.0-or-later AND gnuplot
 
 Summary: The free and open-source Download Manager written in pure Python
 
