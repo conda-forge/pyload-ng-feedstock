@@ -12,25 +12,18 @@ source:
 build:
   entry_points:
     - pyload = pyload.__main__:main
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 3
-  skip: true  # [ py >= 312]
-  #noarch: python
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
-  build:
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
     - pip
-    - python
     #- python <3.12 #see PR and issues 58 & 57
-    #- python {{ python_min }}
+    - python {{ python_min }}
     - setuptools >=38.3
     - wheel
   run:
-    #- python >={{ python_min }},<3.12
-    - python
+    - python >={{ python_min }},<3.12
     - cheroot
     - flask
     - flask-babel >=1.0,<2.dev0
@@ -52,21 +45,18 @@ test:
   imports:
     - pyload
   commands:
-    - set PYTHONIOENCODING=utf-8  # [win]
     - pip check
     - pyload --help
     - pyload --version 
   requires:
     - pip
-    #- python {{ python_min }}
+    - python {{ python_min }}
 
 about:
   home: https://pyload.net
   summary: The free and open-source Download Manager written in pure Python
-  license: AGPL-3.0 AND gnuplot
-  license_file:
-    - LICENSE.md
-    - src/pyload/webui/app/static/img/notice.png
+  license: AGPL-3.0-or-later
+  license_file: LICENSE.md
   dev_url: https://github.com/pyload/pyload
   doc_url: https://github.com/pyload/pyload/wiki
   description: |
