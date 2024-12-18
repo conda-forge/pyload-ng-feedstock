@@ -12,19 +12,19 @@ source:
 build:
   entry_points:
     - pyload = pyload.__main__:main
-  script: {{ PYTHON }} -m pip install . -vv
-  number: 3
-  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 4
+  skip: true  # [py<312]
 
 requirements:
   host:
     - pip
     #- python <3.12 #see PR and issues 58 & 57
-    - python {{ python_min }}
+    - python
     - setuptools >=38.3
     - wheel
   run:
-    - python >={{ python_min }},<3.12
+    - python
     - cheroot
     - flask
     - flask-babel >=1.0,<2.dev0
@@ -51,7 +51,6 @@ test:
     - pyload --version 
   requires:
     - pip
-    - python {{ python_min }}
 
 about:
   home: https://pyload.net
