@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyload-ng-feeds
 
 Home: https://pyload.net
 
-Package license: AGPL-3.0-or-later AND gnuplot
+Package license: AGPL-3.0-or-later
 
 Summary: The free and open-source Download Manager written in pure Python
 
@@ -23,11 +23,65 @@ Current build status
 ====================
 
 
-<table><tr><td>All platforms:</td>
+<table>
+    
+  <tr>
+    <td>Azure</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=16152&branchName=main">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyload-ng-feedstock?branchName=main">
-      </a>
+      <details>
+        <summary>
+          <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=16152&branchName=main">
+            <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyload-ng-feedstock?branchName=main">
+          </a>
+        </summary>
+        <table>
+          <thead><tr><th>Variant</th><th>Status</th></tr></thead>
+          <tbody><tr>
+              <td>linux_64_python3.12.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=16152&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyload-ng-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_python3.12.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_aarch64_python3.12.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=16152&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyload-ng-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_python3.12.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_ppc64le_python3.12.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=16152&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyload-ng-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_python3.12.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_python3.12.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=16152&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyload-ng-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_python3.12.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_python3.12.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=16152&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyload-ng-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_python3.12.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64_python3.12.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=16152&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyload-ng-feedstock?branchName=main&jobName=win&configuration=win%20win_64_python3.12.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </details>
     </td>
   </tr>
 </table>
