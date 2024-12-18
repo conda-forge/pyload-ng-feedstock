@@ -55,10 +55,8 @@ test:
 about:
   home: https://pyload.net
   summary: The free and open-source Download Manager written in pure Python
-  license: AGPL-3.0-or-later AND gnuplot
-  license_file:
-    - LICENSE.md
-    - src/pyload/webui/app/static/img/notice.png
+  license: AGPL-3.0-or-later
+  license_file: LICENSE.md
   dev_url: https://github.com/pyload/pyload
   doc_url: https://github.com/pyload/pyload/wiki
   description: |
