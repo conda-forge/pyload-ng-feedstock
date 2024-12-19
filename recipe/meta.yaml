@@ -10,17 +10,17 @@ source:
   sha256: 2db8b16947ec59e53c595a59b122c998547f8552e10abd4346c21e15809cc450
 
 build:
+  skip: true  # [py>312]
+  #see PR and issues 58 & 57
   entry_points:
     - pyload = pyload.__main__:main
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 4
-  skip: true  # [py>312]
 
 requirements:
   host:
     - pip
     - python
-    #- python <3.12 #see PR and issues 58 & 57
     - setuptools >=38.3
     - wheel
   run:
@@ -46,6 +46,7 @@ test:
   imports:
     - pyload
   commands:
+    - set PYTHONIOENCODING=utf-8  # [win]
     - pip check
     - pyload --help
     - pyload --version 
