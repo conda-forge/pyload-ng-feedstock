@@ -36,7 +36,7 @@ requirements:
     - cryptography >=35.0.0
     - filetype >=1.0,<2.dev0
     - js2py >=0.7,<1.dev0  # [py<312]
-    - dupky  # [py>312]
+    - dupky  # [py>=312]
     - pycurl >=7.43,<8.dev0
     - certifi
     - semver >=2.10,<3.dev0
