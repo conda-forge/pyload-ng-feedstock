@@ -13,7 +13,7 @@ build:
   entry_points:
     - pyload = pyload.__main__:main
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 5
+  number: 6
 
 requirements:
   build:
@@ -26,6 +26,7 @@ requirements:
     - wheel
   run:
     - python
+    - pip
     - cheroot
     - flask
     - flask-babel >=1.0,<2.dev0
@@ -42,7 +43,6 @@ requirements:
     - certifi
     - semver >=2.10,<3.dev0
     - setuptools >=38.3
-    - pip <24 #Flask-Babel 1.0.0 issues
 
 test:
   imports:
