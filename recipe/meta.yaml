@@ -24,6 +24,7 @@ requirements:
     - python
     - setuptools >=38.3
     - wheel
+    - packaging
   run:
     - python
     - pip
@@ -43,7 +44,8 @@ requirements:
     - certifi
     - semver >=2.10,<3.dev0
     - setuptools >=38.3
-    - packaging #missing at test
+    - packaging
+    - cryptography >=35.0.0,<40.0.0
 
 test:
   imports:
