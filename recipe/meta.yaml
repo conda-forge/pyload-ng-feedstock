@@ -43,6 +43,7 @@ requirements:
     - certifi
     - semver >=2.10,<3.dev0
     - setuptools >=38.3
+    - packaging #missing at test
 
 test:
   imports:
