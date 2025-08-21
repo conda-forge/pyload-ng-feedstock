@@ -40,12 +40,13 @@ requirements:
     - filetype >=1.0,<2.dev0
     - js2py >=0.7,<1.dev0  # [py<312]
     - dukpy >=0.3.1  # [py>=312]
-    - pycurl >=7.43,<8.dev0
+    - pycurl
     - certifi
     - semver >=2.10,<3.dev0
     - setuptools >=38.3
     - packaging
     - cryptography
+    - pydantic >=2.10.6,<2.11.dev0
 
 test:
   imports:
