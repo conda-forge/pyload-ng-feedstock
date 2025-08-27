@@ -1,5 +1,5 @@
 {% set name = "pyload-ng" %}
-{% set version = "0.5.0b3.dev91" %}
+{% set version = "0.5.0b3.dev93" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 7220393eb72d413174b84512a7a22bb38bf9a98eb77e1a7e2306b84553696751
+  sha256: b93d0969f658a28d1404bf01d3ddcd249559ae43c2fdcbd797805b9cbcdb350e
 
 build:
   entry_points:
