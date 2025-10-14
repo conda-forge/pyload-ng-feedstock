@@ -1,5 +1,7 @@
+cdt_name:
+- conda
 channel_sources:
-- conda-forge
+- conda-forge,conda-forge/label/python_rc
 channel_targets:
 - conda-forge pyload-ng_dev
 docker_image:
@@ -12,3 +14,6 @@ python:
 - 3.14.* *_cp314
 target_platform:
 - linux-ppc64le
+zip_keys:
+- - python
+  - channel_sources
