@@ -49,6 +49,7 @@ requirements:
     - packaging
     - cryptography
     - pydantic >=2.10.6,<2.11.dev0
+    - mini-racer
 
 test:
   imports:
