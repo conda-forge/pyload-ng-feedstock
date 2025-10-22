@@ -1,10 +1,6 @@
 About pyload-ng-feedstock
 =========================
 
-
-
-
-
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyload-ng-feedstock/blob/main/LICENSE.txt)
 
 Home: https://pyload.net
