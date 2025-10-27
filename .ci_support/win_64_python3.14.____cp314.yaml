@@ -1,6 +1,5 @@
 channel_sources:
 - conda-forge
-- conda-forge pyload-ng_dev
 channel_targets:
 - conda-forge pyload-ng_dev
 pin_run_as_build:
