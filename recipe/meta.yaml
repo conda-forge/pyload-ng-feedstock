@@ -60,6 +60,7 @@ test:
     - pyload --version
   requires:
     - pip
+    - msgspec =0.18.6 #odd version issue
 
 about:
   home: https://pyload.net
