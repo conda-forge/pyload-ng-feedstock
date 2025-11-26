@@ -1,5 +1,5 @@
 {% set name = "pyload-ng" %}
-{% set version = "0.5.0b3.dev91" %}
+{% set version = "0.5.0b3.dev92" %}
 
 package:
   name: {{ name|lower }}
@@ -7,26 +7,28 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 7220393eb72d413174b84512a7a22bb38bf9a98eb77e1a7e2306b84553696751
+  sha256: 6236fd4adab415a5df6aff054fa18f7f67323c647d367e95830754e27897d126
 
 build:
   entry_points:
     - pyload = pyload.__main__:main
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
+  noarch: python
 
 requirements:
   build:
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+    - python {{ python_min }}
+    - babel
+    - jinja2
   host:
     - pip
-    - python
+    - python {{ python_min }}
     - setuptools >=38.3
     - wheel
     - packaging
   run:
-    - python
+    - python >={{ python_min }},<3.14 #See mini-racer
     - pip
     - cheroot
     - flask
@@ -38,25 +40,26 @@ requirements:
     - bitmath >=1.3,<2.dev0
     - cryptography >=35.0.0
     - filetype >=1.0,<2.dev0
-    - js2py >=0.7,<1.dev0  # [py<312]
-    - dukpy >=0.3.1  # [py>=312]
-    - pycurl >=7.43,<8.dev0
+    - pycurl
     - certifi
     - semver >=2.10,<3.dev0
     - setuptools >=38.3
     - packaging
     - cryptography
+    - pydantic >=2.10.6,<2.11.dev0
+    - mini-racer #Isn't avalaible yet for 3.14 because gstuil isn't avalaible yet for 3.14
 
 test:
   imports:
     - pyload
   commands:
-    - set PYTHONIOENCODING=utf-8  # [win]
+    #- set PYTHONIOENCODING=utf-8  # [win]
     - pip check
     - pyload --help
     - pyload --version
   requires:
     - pip
+    - msgspec =0.19 #metadata issues
 
 about:
   home: https://pyload.net
