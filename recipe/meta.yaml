@@ -13,8 +13,8 @@ build:
   entry_points:
     - pyload = pyload.__main__:main
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
-  noarch: pyton
+  number: 0
+  noarch: python
 
 requirements:
   build:
