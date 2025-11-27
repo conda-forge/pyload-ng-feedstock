@@ -60,6 +60,7 @@ test:
   requires:
     - pip
     - msgspec =0.19 #metadata issues
+    - python {{ python_min }}
 
 about:
   home: https://pyload.net
