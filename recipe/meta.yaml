@@ -13,7 +13,7 @@ build:
   entry_points:
     - pyload = pyload.__main__:main
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
   noarch: python
 
 requirements:
@@ -28,7 +28,7 @@ requirements:
     - wheel
     - packaging
   run:
-    - python >={{ python_min }},<3.14 #See mini-racer
+    - python >={{ python_min }}
     - pip
     - cheroot
     - flask
@@ -47,7 +47,7 @@ requirements:
     - packaging
     - cryptography
     - pydantic >=2.10.6,<2.11.dev0
-    - mini-racer #Isn't avalaible yet for 3.14 because gstuil isn't avalaible yet for 3.14
+    - mini-racer
 
 test:
   imports:
