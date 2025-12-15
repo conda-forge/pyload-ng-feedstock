@@ -14,7 +14,8 @@ build:
     - pyload = pyload.__main__:main
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 2
-
+  skip: true  # [py<313]
+#required pydantic (more precisely pydantic-core) isn't avalaible for python 314
 requirements:
   build:
     - python
