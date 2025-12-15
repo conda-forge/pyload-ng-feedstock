@@ -13,22 +13,21 @@ build:
   entry_points:
     - pyload = pyload.__main__:main
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
-  noarch: python
+  number: 2
 
 requirements:
   build:
-    - python {{ python_min }}
+    - python
     - babel
     - jinja2
   host:
     - pip
-    - python {{ python_min }}
+    - python
     - setuptools >=38.3
     - wheel
     - packaging
   run:
-    - python >={{ python_min }}
+    - python
     - pip
     - cheroot
     - flask
@@ -53,14 +52,13 @@ test:
   imports:
     - pyload
   commands:
-    #- set PYTHONIOENCODING=utf-8  # [win]
+    - set PYTHONIOENCODING=utf-8  # [win]
     - pip check
     - pyload --help
     - pyload --version
   requires:
     - pip
     - msgspec =0.19 #metadata issues
-    - python {{ python_min }}
 
 about:
   home: https://pyload.net
