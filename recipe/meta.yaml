@@ -48,6 +48,9 @@ requirements:
     - cryptography
     - pydantic >=2.10.6,<2.11.dev0
     - mini-racer
+    - aia-chaser >=0.9.0
+    - flask-wtf
+    - defusedxml
 
 test:
   imports:
