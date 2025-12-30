@@ -1,5 +1,5 @@
 {% set name = "pyload-ng" %}
-{% set version = "0.5.0b3.dev93" %}
+{% set version = "0.5.0b3.dev94" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,13 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: b93d0969f658a28d1404bf01d3ddcd249559ae43c2fdcbd797805b9cbcdb350e
+  sha256: d13f506f3ce02d5f9c4db750a7a29eb8b8584df8522c1e556dad0c20d086af2e
 
 build:
   entry_points:
     - pyload = pyload.__main__:main
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 2
+  number: 0
   skip: true  # [py>313]
 #required pydantic (more precisely pydantic-core) isn't avalaible for python 314
 requirements:
@@ -48,6 +48,9 @@ requirements:
     - cryptography
     - pydantic >=2.10.6,<2.11.dev0
     - mini-racer
+    - aia-chaser >=0.9.0
+    - flask-wtf
+    - defusedxml
 
 test:
   imports:
