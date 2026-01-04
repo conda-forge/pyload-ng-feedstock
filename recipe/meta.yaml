@@ -13,12 +13,13 @@ build:
   entry_points:
     - pyload = pyload.__main__:main
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
   skip: true  # [py>313]
 #required pydantic (more precisely pydantic-core) isn't avalaible for python 314
 requirements:
   build:
-    - python
+    - python                                 # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - babel
     - jinja2
   host:
