@@ -18,7 +18,8 @@ build:
 #required pydantic (more precisely pydantic-core) isn't avalaible for python 314
 requirements:
   build:
-    - python
+    - python                                 # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - babel
     - jinja2
   host:
