@@ -13,9 +13,9 @@ build:
   entry_points:
     - pyload = pyload.__main__:main
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 2
-  skip: true  # [py>313]
-#required pydantic (more precisely pydantic-core) isn't avalaible for python 314
+  number: 3
+  skip: true  # [py>313 or ppc64le]
+#required pydantic (more precisely pydantic-core) isn't avalaible for python 314 and mini-racer on ppc64le isn't avalaible for now
 requirements:
   build:
     - python                                 # [build_platform != target_platform]
@@ -63,7 +63,6 @@ test:
     - pyload --version
   requires:
     - pip
-    - msgspec =0.19 #metadata issues
 
 about:
   home: https://pyload.net
