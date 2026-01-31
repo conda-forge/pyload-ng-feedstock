@@ -14,8 +14,8 @@ build:
     - pyload = pyload.__main__:main
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
-  skip: true  # [py>313 or ppc64le]
-#required pydantic (more precisely pydantic-core) isn't avalaible for python 314 and mini-racer on ppc64le isn't avalaible for now
+  skip: true  # [pc64le]
+#mini-racer on ppc64le isn't avalaible for now
 requirements:
   build:
     - python                                 # [build_platform != target_platform]
@@ -29,8 +29,8 @@ requirements:
     - wheel
     - packaging
   run:
-    - python
-    - pip
+    - python >=3.9
+    - aia-chaser >=0.9.0
     - cheroot
     - flask
     - flask-babel
@@ -38,20 +38,18 @@ requirements:
     - flask-compress >=1.8,<2.dev0
     - flask-session
     - flask-themes2 >=1.0,<2.dev0
+    - flask-wtf
     - bitmath >=1.3,<2.dev0
     - cryptography >=35.0.0
+    - defusedxml
     - filetype >=1.0,<2.dev0
+    - mini-racer
+    - packaging
     - pycurl
+    - pydantic
     - certifi
     - semver >=2.10,<3.dev0
     - setuptools >=38.3
-    - packaging
-    - cryptography
-    - pydantic >=2.10.6,<2.11.dev0
-    - mini-racer
-    - aia-chaser >=0.9.0
-    - flask-wtf
-    - defusedxml
 
 test:
   imports:
