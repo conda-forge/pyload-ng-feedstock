@@ -29,7 +29,7 @@ requirements:
     - wheel
     - packaging
   run:
-    - python >=3.9
+    - python
     - aia-chaser >=0.9.0
     - cheroot
     - flask
