@@ -1,5 +1,5 @@
 {% set name = "pyload-ng" %}
-{% set version = "0.5.0b3.dev94" %}
+{% set version = "0.5.0b3.dev95" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,13 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: d13f506f3ce02d5f9c4db750a7a29eb8b8584df8522c1e556dad0c20d086af2e
+  sha256: 1125702e6cc98204dae1a3cd579ea9fb8bb9015f92633693bb4d35d0fa381fdd
 
 build:
   entry_points:
     - pyload = pyload.__main__:main
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 3
+  number: 0
   skip: true  # [py>313 or ppc64le]
 #required pydantic (more precisely pydantic-core) isn't avalaible for python 314 and mini-racer on ppc64le isn't avalaible for now
 requirements:
