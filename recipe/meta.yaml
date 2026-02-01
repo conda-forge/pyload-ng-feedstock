@@ -22,12 +22,14 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - babel
     - jinja2
+    - _osx >=26  # [osx]
   host:
     - pip
     - python
     - setuptools >=38.3
     - wheel
     - packaging
+    - _osx >=26  # [osx]
   run:
     - python
     - aia-chaser >=0.9.0
@@ -50,6 +52,7 @@ requirements:
     - certifi
     - semver >=2.10,<3.dev0
     - setuptools >=38.3
+    - _osx >=10  # [osx]
 
 test:
   imports:
