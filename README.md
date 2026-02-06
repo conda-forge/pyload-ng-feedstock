@@ -3,7 +3,7 @@ About pyload-ng-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyload-ng-feedstock/blob/main/LICENSE.txt)
 
-Home: https://pyload.net
+Home: https://pyload.net/
 
 Package license: AGPL-3.0-or-later
 
@@ -17,7 +17,6 @@ Documentation: https://github.com/pyload/pyload/wiki
 It supports link decryption as well as all important container formats.
 Targeted for headless NASs it is designed to be extremely lightweight,
 fully customizable and remotely manageable via web interface.
-
 
 Current build status
 ====================
