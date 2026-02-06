@@ -1,25 +1,31 @@
-{% set name = "pyload-ng" %}
-{% set version = "0.5.0b3.dev95" %}
+schema_version: 1
+
+context:
+  name: pyload-ng
+  version: 0.5.0b3.dev95
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: ${{ name|lower }}
+  version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
   sha256: 1125702e6cc98204dae1a3cd579ea9fb8bb9015f92633693bb4d35d0fa381fdd
 
 build:
-  entry_points:
-    - pyload = pyload.__main__:main
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
-  skip: true  # [ppc64le]
-#mini-racer on ppc64le isn't avalaible for now
+  number: 1
+  skip: ppc64le #mini-racer on ppc64le isn't avalaible for now
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  python:
+    entry_points:
+      - pyload = pyload.__main__:main
+
 requirements:
   build:
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+    - if: build_platform != target_platform
+      then: python
+    - if: build_platform != target_platform
+      then: cross-python_${{ target_platform }}
     - babel
     - jinja2
   host:
@@ -51,29 +57,34 @@ requirements:
     - semver >=2.10,<3.dev0
     - setuptools >=38.3
 
-test:
-  imports:
-    - pyload
-  commands:
-    - set PYTHONIOENCODING=utf-8  # [win]
-    - pip check
-    - pyload --help
-    - pyload --version
-  requires:
-    - pip
+tests:
+  - python:
+      imports:
+        - pyload
+  - requirements:
+      run:
+        - pip
+    script:
+      - if: win
+        then: set PYTHONIOENCODING=utf-8
+      - pip check
+      - pyload --help
+      - pyload --version
 
 about:
-  home: https://pyload.net
   summary: The free and open-source Download Manager written in pure Python
   license: AGPL-3.0-or-later
   license_file: LICENSE.md
-  dev_url: https://github.com/pyload/pyload
-  doc_url: https://github.com/pyload/pyload/wiki
   description: |
     *pyLoad* is a free and open source downloader for 1-click-hosting sites.
     It supports link decryption as well as all important container formats.
     Targeted for headless NASs it is designed to be extremely lightweight,
     fully customizable and remotely manageable via web interface.
+
+
+  homepage: https://pyload.net
+  repository: https://github.com/pyload/pyload
+  documentation: https://github.com/pyload/pyload/wiki
 
 extra:
   recipe-maintainers:
