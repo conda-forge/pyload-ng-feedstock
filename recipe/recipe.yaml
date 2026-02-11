@@ -3,6 +3,7 @@ schema_version: 1
 context:
   name: pyload-ng
   version: 0.5.0b3.dev95
+  build_number: 2
 
 package:
   name: ${{ name|lower }}
@@ -13,11 +14,11 @@ source:
   sha256: 1125702e6cc98204dae1a3cd579ea9fb8bb9015f92633693bb4d35d0fa381fdd
 
 build:
-  number: 2
   noarch: python
+  number: ${{ build_number }}
   #skip: ppc64le #mini-racer on ppc64le isn't avalaible for now
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  string: ${{ pymin }}_pyh${{ hash }}_${{ number }}
+  string: ${{ pymin }}_pyh${{ hash }}_${{ build_number }}
   python:
     entry_points:
       - pyload = pyload.__main__:main
