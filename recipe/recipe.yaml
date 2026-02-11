@@ -17,6 +17,7 @@ build:
   noarch: python
   #skip: ppc64le #mini-racer on ppc64le isn't avalaible for now
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  string: "python_min{{ python_min }}_pyh{{ PKG_HASH }}_{{ PKG_BUILDNUM }}"
   python:
     entry_points:
       - pyload = pyload.__main__:main
