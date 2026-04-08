@@ -1,2 +1,15 @@
 channel_targets:
   - conda-forge pyload-ng_dev
+python_min:
+ - "3.10"
+ - "3.13"
+python_max:
+ - "3.13"
+ - "4.0"
+pymin:
+ - pymin310
+ - pymin313
+zip_keys:
+ - python_min
+ - python_max
+ - pymin
