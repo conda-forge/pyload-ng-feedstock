@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pyload-ng
-  version: "0.5.0b3.dev97"
+  version: "0.5.0b3.dev98"
   build_number: 0
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: f31196739ff62b8e73c2707b398afc2aaaf85740d68c7031d360ac88489421f7
+  sha256: 2016aa41a98a4f8da99b89286952d8d544ee9721982a1741803c8f1d24d617bf
 
 build:
   noarch: python
