@@ -57,7 +57,7 @@ requirements:
     - pycurl
     - pydantic
     - certifi
-    - semver >=2.10,<3.dev0
+    - semver
     - setuptools >=38.3
 
 tests:
