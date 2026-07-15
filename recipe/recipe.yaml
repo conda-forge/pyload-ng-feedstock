@@ -45,7 +45,7 @@ requirements:
     - flask-babel
     - flask-caching >=1.9,<2.dev0
     - flask-compress >=1.8,<2.dev0
-    - Flask-Session>=0.8.0
+    - Flask-Session >=0.8.0
     - flask-themes2 >=1.0,<2.dev0
     - flask-wtf
     - bitmath >=1.3,<2.dev0
