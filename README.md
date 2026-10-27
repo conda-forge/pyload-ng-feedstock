@@ -49,31 +49,73 @@ conda config --add channels conda-forge/label/pyload-ng_dev
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge/label/pyload-ng_dev` channel has been enabled, `pyload-ng` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install pyload-ng
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install pyload-ng
 ```
 
-It is possible to list all of the versions of `pyload-ng` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add pyload-ng
+# for installing globally
+pixi global install pyload-ng
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `pyload-ng` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search pyload-ng --channel conda-forge/label/pyload-ng_dev
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search pyload-ng --channel conda-forge/label/pyload-ng_dev
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search pyload-ng --channel conda-forge/label/pyload-ng_dev
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -85,6 +127,9 @@ mamba repoquery whoneeds pyload-ng --channel conda-forge/label/pyload-ng_dev
 # List dependencies of `pyload-ng`:
 mamba repoquery depends pyload-ng --channel conda-forge/label/pyload-ng_dev
 ```
+
+</details>
+
 
 
 About conda-forge
@@ -101,9 +146,7 @@ for each of the installable packages. Such a repository is known as a *feedstock
 A feedstock is made up of a conda recipe (the instructions on what and how to build
 the package) and the necessary configurations for automatic building using freely
 available continuous integration services. Thanks to the awesome service provided by
-[Azure](https://azure.microsoft.com/en-us/services/devops/), [GitHub](https://github.com/),
-[CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
-[Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
+[Azure](https://azure.microsoft.com/en-us/services/devops/) and [GitHub](https://github.com/)
 it is possible to build and upload installable packages to the
 [conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.

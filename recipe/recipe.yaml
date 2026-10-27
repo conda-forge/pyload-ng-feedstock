@@ -3,7 +3,7 @@ schema_version: 1
 context:
   name: pyload-ng
   version: "0.5.0b3.dev101"
-  build_number: 0
+  build_number: 1
 
 package:
   name: ${{ name|lower }}
@@ -64,11 +64,11 @@ tests:
   - python:
       imports:
         - pyload
-  - requirements:
-      run:
-        - pip
-        - python ${{ python_min }}.*
-    script:
+      pip_check: true
+      python_version: 
+        - ${{ python_min }}.*
+        - "*"
+  - script:
     #  - if: win
       #  then: set PYTHONIOENCODING=utf-8
       - pip check
