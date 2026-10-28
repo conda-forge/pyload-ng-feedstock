@@ -39,7 +39,7 @@ requirements:
     - packaging
   run:
     - python >=${{ python_min }}
-    - aia-chaser >=0.9.0
+    - aia-chaser >=3.6.0
     - cheroot
     - flask
     - flask-babel
@@ -54,11 +54,12 @@ requirements:
     - filetype >=1.0,<2.dev0
     - mini-racer
     - packaging
-    - pycurl
+    - pycurl >=7.45.7
     - pydantic
     - certifi
     - semver
     - setuptools >=38.3
+    - pyfcm >=2.0.0
 
 tests:
   - python:
